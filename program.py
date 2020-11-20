@@ -11,4 +11,4 @@ def v2():
 
 @app.route('/yudin')
 def yudin():
-    return 'Hello from CI with GitHub Actions by YUDIN'
+    return 'Hello from CI with GitHub Actions by Yudin'
