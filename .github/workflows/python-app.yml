@@ -57,3 +57,13 @@ jobs:
       with:
         push: true
         tags: yargo54/inbo-04-17:latest
+    - name: Restart service
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          cd yudin
+          docker-compose --no-ansi pull
+          docker-compose --no-ansi up -d
+        host: ${{ secrets.SSH_HOST }}
+        user: student
+        key: ${{ secrets.SSH_PASSWORD}}
